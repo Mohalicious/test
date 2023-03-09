@@ -1,0 +1,218 @@
+/* Global styles */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	color: #333;
+	background-color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+
+a {
+	color: #0f0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0a0;
+}
+
+button {
+	cursor: pointer;
+}
+
+/* Header styles */
+header {
+	background-color: #000;
+	color: #0f0;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+nav li {
+	margin-right: 20px;
+}
+
+nav a {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+	background-color: #0a0;
+}
+
+nav form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: auto;
+}
+
+nav input[type="text"] {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+}
+
+nav button[type="submit"] {
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #0a0;
+	color: #fff;
+	margin-left: 10px;
+}
+
+/* Main styles */
+main {
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #0f0;
+}
+
+p {
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.button {
+	display: inline-block;
+	background-color: #0a0;
+	color: #fff;
+	padding: 10px 20px;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	transition: background-color 0.3s ease;
+}
+
+.button:hover {
+	background-color: #060;
+}
+
+/* Footer styles */
+footer {
+	background-color: #000;
+	color: #0f0;
+	padding: 20px;
+	text-align: center;
+	font-size: 14px;
+}
+
+footer a {
+	color: #0f0;
+}
+.slider-menu {
+  position: fixed;
+  top: 0;
+  left: -300px; /* move the menu off-screen */
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease-in-out; /* add animation effect */
+}
+
+.slider-menu.show {
+  left: 0; /* show the menu */
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.options {
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  display: none; /* hide the default checkbox */
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label::before {
+  background-color: #ccc;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+}
+
+input[type="checkbox"] + label::after {
+  content: "\f00c"; /* FontAwesome checkmark */
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: FontAwesome;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #3e8e41;
+  padding: 4px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0); /* hide the checkmark */
+  transition: transform 0.2s ease-in-out; /* add animation effect */
+}
+
+input[type="checkbox"]:checked + label::after {
+  transform: translate(-50%, -50%) scale(1); /* show the checkmark */
+}
